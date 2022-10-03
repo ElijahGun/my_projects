@@ -1,0 +1,14 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "css course 22' natours project built from scratch",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss:css/styles.css"
+  },
+  "author": "Elijah",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

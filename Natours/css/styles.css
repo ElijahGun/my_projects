@@ -1,0 +1,257 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  line-height: 1.7;
+}
+
+body {
+  padding: 3rem;
+}
+
+:root {
+  --color-primary: 85, 197, 122;
+  --color-primary-light: 126, 213, 111;
+  --color-primary-dark: 40, 180, 133;
+  --color-secondary-light: 255, 185, 0;
+  --color-secondary-dark: 255, 119, 48;
+  --color-tertiary-light: 41, 152, 255;
+  --color-tertiary-dark: 86, 67, 250;
+  --color-grey-light-1: 247, 247, 247;
+  --color-grey-light-2: 238, 238, 238;
+  --color-grey-dark: 119, 119, 119;
+  --color-grey-dark-2: 153, 153, 153;
+  --color-grey-dark-3: 51, 51, 51;
+  --color-white: 255, 255, 255;
+  --color-black: 0, 0, 0;
+}
+
+.header {
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(var(--color-primary-light), 0.8), rgba(var(--color-primary-dark), 0.8)), url(/img/hero.jpg);
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 79%, 0 100%);
+  z-index: 1;
+}
+
+.logobox {
+  position: relative;
+}
+.logobox .logo {
+  height: 4rem;
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__text-box {
+  width: 60%;
+  position: relative;
+  top: 36rem;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header__text-box--h1 {
+  color: white;
+  width: 100%;
+}
+.header__text-box--h1 .text-primary {
+  font-size: 6rem;
+  letter-spacing: 4rem;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 2rem;
+}
+.header__text-box--h1 .text-sub {
+  display: inline-block;
+  letter-spacing: 1.5rem;
+  word-spacing: 2rem;
+  width: 100%;
+  margin-bottom: 8rem;
+}
+.header__text-box .btn {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 1.75rem 3.25rem;
+  border-radius: 100px;
+  font-size: 2rem;
+}
+.header__text-box .btn-white {
+  color: rgb(var(--color-grey-dark));
+  background-color: white;
+  transition: 0.2s;
+  position: relative;
+}
+.header__text-box .btn-white:hover {
+  transform: translateY(-0.65rem) scale(1.03);
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.2);
+}
+.header__text-box .btn-white:active {
+  transform: translateY(-0.25rem);
+}
+.header__text-box .btn-white::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.2s;
+}
+.header__text-box .btn-white:hover::after {
+  transform: scaleX(1.75) scaleY(1.25);
+  opacity: 0;
+}
+
+.tour-summary {
+  background-color: rgb(var(--color-grey-light-1));
+  padding: 40rem 4rem;
+  position: relative;
+  top: -35rem;
+  z-index: 0;
+}
+.tour-summary__title {
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+  word-spacing: 1rem;
+  background: -webkit-linear-gradient(rgba(var(--color-primary-light), 0.8), rgba(var(--color-primary-dark), 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6rem;
+  transition: all 0.2s;
+}
+.tour-summary__title:hover {
+  transform: skewX(16deg) skewY(3deg);
+  cursor: pointer;
+}
+.tour-summary__container {
+  display: flex;
+}
+.tour-summary__container > * {
+  width: 50%;
+}
+
+.tour-summary-textblock .tour-summary-text--h3 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  color: rgb(var(--color-grey-dark));
+  margin-bottom: 2.25rem;
+}
+.tour-summary-textblock .tour-summary-text--p {
+  font-size: 1.5rem;
+  color: rgb(var(--color-grey-dark));
+  margin-bottom: 3.25rem;
+}
+.tour-summary-textblock .link-btn-green {
+  display: inline-block;
+  color: rgb(var(--color-primary));
+  font-size: 1.75rem;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(var(--color-primary));
+  transition: all 0.2s;
+}
+.tour-summary-textblock .link-btn-green:hover {
+  color: white;
+  background-color: rgb(var(--color-primary));
+  transform: translateY(-0.5rem);
+}
+.tour-summary-textblock .link-btn-green:active {
+  transform: translateY(-0.2rem);
+}
+
+.composition {
+  background-color: aqua;
+  position: relative;
+  height: 0;
+}
+.composition__photo {
+  width: 55%;
+  border-radius: 2px;
+  box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: all 0.2s;
+}
+.composition__photo:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  outline: 1rem solid rgb(var(--color-primary));
+  outline-offset: 1.4rem;
+}
+.composition__photo--1 {
+  top: 0rem;
+}
+.composition__photo--2 {
+  top: 7rem;
+  right: 0rem;
+}
+.composition__photo--3 {
+  top: 15rem;
+  left: 10rem;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.8);
+}
+
+.features {
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(var(--color-primary-light), 0.8), rgba(var(--color-primary-dark), 0.8)), url(/img/nat-4.jpg);
+  clip-path: polygon(0 21%, 100% 0, 100% 100%, 0 100%);
+  background-size: cover;
+  background-position: top;
+  height: 55vh;
+  top: -65rem;
+}
+
+.card-container {
+  padding: 0 6rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 30rem;
+}
+
+.card {
+  text-align: center;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 2px;
+  background-color: rgb(var(--color-grey-light-2));
+  box-shadow: 0.2rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+}
+.card__title {
+  text-transform: uppercase;
+  color: rgb(var(--color-grey-dark));
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.card__text {
+  color: rgb(var(--color-grey-dark));
+  font-size: 1.4rem;
+}
+.svg {
+  color: green;
+}
+
+/*# sourceMappingURL=styles.css.map */
